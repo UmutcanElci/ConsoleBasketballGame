@@ -2,7 +2,7 @@ package Game.Players;
 
 import Game.BasketballField;
 
-public class BasketballPlayer {
+public abstract class BasketballPlayer {
     String playerName;
     String playerSurName;
     int playerAge;
@@ -17,7 +17,7 @@ public class BasketballPlayer {
         return shooting;
     }
 
-    public double blockingChance(double blocking){
+    public  double blockingChance(double blocking){
         this.blocking = blocking;
         blocking = (blocking * this.height);
         return blocking;
