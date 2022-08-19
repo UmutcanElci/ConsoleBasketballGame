@@ -9,6 +9,7 @@ public class PlayerCommand {
         while (true){
             if(choice == 1){
                 //Movement
+
             } else if (choice == 2) {
                 //Pass
             }
