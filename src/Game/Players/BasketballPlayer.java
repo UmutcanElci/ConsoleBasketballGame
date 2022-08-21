@@ -11,6 +11,7 @@ public abstract class BasketballPlayer {
     double wingspan;
     double shooting;
     double blocking;
+
     public double shootingChance(double shooting){
         this.shooting = shooting;
         shooting = (shooting / this.height);
@@ -34,4 +35,5 @@ public abstract class BasketballPlayer {
         System.out.println("Height : " + height + " Wingspan : " + wingspan);
 
     }
+
 }
