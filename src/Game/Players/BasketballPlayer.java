@@ -14,7 +14,7 @@ public abstract class BasketballPlayer {
 
     public double shootingChance(double shooting){
         this.shooting = shooting;
-        shooting = (shooting / this.height);
+        shooting = (shooting / this.height)*4; // - distance gonna add later.
         return shooting;
     }
 
@@ -23,6 +23,7 @@ public abstract class BasketballPlayer {
         blocking = (blocking * this.height);
         return blocking;
     }
+
     public BasketballPlayer(String playerName,String playerSurName,int playerAge,double height,double wingspan, double shooting, double blocking){
         this.playerName = playerName;
         this.playerSurName = playerSurName;
