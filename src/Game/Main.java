@@ -3,6 +3,7 @@ import Game.Players.BasketballPlayer;
 import Game.Players.Position.PointGuard;
 import java.util.Scanner;
 import java.lang.String;
+import Game.BasketballField;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -15,6 +16,7 @@ public class Main {
         System.out.println("You can see this field map to which zone is 2 points or 3 points");
         field.printFieldRule();
 
+
         while (true){
             System.out.println("1-Move\n2-Shoot \n3-Timeout\n4-Field Rule\n5-Exit");
             choice = input.nextInt();
@@ -23,12 +25,10 @@ public class Main {
                     System.out.println("Wrong input\nEnter again");
                 }
                 else if(choice == 1){
-                    System.out.println("Which way you want to move?");
-                    System.out.println("To left 1\nTo right 2\nTo up 3\nTo down 4");
-                    int moveVal = 0;
-                    moveVal = input.nextInt();
-                    field.movePlayer(moveVal);
+                    //System.out.println("Which way you want to move?");
+                    //System.out.println("To left 1\nTo right 2\nTo up 3\nTo down 4");
                     field.printBasketballField();
+
                 }
                 else if(choice == 2){
                     System.out.println("Shoot");
@@ -48,6 +48,9 @@ public class Main {
                     break;
                 }
         }
+    }
+    public static void isItIn(){
+
     }
 
 }
