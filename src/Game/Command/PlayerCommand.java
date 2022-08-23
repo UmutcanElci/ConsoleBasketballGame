@@ -1,10 +1,11 @@
 package Game.Command;
-
+import Game.Players.BasketballPlayer;
 import java.util.Scanner;
 
 public class PlayerCommand {
     public PlayerCommand(){
         Scanner input = new Scanner(System.in);
+        /*
         int choice = 0;
         while (true){
             if(choice == 1){
@@ -24,5 +25,7 @@ public class PlayerCommand {
             }
 
         }
+
+         */
     }
 }
