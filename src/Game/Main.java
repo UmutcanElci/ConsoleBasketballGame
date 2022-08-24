@@ -3,19 +3,19 @@ import Game.Players.BasketballPlayer;
 import Game.Players.Position.PointGuard;
 import java.util.Scanner;
 import java.lang.String;
-import Game.BasketballField;
+import java.util.Random;
 public class Main {
+   public static BasketballPlayer player1 = new PointGuard("Stephen","Curry",33,6.1,6.1,99.9,62.1);
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int choice = 0;
-        BasketballPlayer player1 = new PointGuard("Stephen","Curry",33,6.1,6.1,99.9,62.1);
         BasketballField field = new BasketballField();
         System.out.println("Welcome to the Console Basketball Game!");
         System.out.println("To start with you have 3 choice move shoot and timeout");
         System.out.println("If you want to end the game type 5");
         System.out.println("You can see this field map to which zone is 2 points or 3 points");
         field.printFieldRule();
-
 
         while (true){
             System.out.println("1-Move\n2-Shoot \n3-Timeout\n4-Field Rule\n5-Exit");
@@ -31,8 +31,7 @@ public class Main {
 
                 }
                 else if(choice == 2){
-                    System.out.println("Shoot");
-
+                    isItIn();
                 }
                 else if(choice == 3){
                     System.out.println("Timeout");
@@ -50,7 +49,16 @@ public class Main {
         }
     }
     public static void isItIn(){
-
+         Random random = new Random();
+       int value = (int) player1.shootingChance(99.9);
+       int randNum = random.nextInt(100);
+       randNum = randNum +1;
+       if(randNum<=value){
+           System.out.println("It's in!\n");
+       }
+       else {
+           System.out.println("Missed!\n");
+       }
     }
 
 }
