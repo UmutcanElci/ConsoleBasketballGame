@@ -20,7 +20,7 @@ public abstract class BasketballPlayer {
 
     public  double blockingChance(double blocking){
         this.blocking = blocking;
-        blocking = (blocking * this.height);
+        blocking = (blocking * this.height)/14;
         return blocking;
     }
 
